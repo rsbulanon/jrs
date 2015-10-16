@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <dynobjx.com.jrs.customviews.TextViewPlus
+        android:layout_width="match_parent"
+        android:background="@color/domestic_intl_btn_bg"
+        android:layout_height="@dimen/dp_fifty"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_thirty"
+        app:customTextViewFont="Roboto-Medium.ttf"
+        android:paddingLeft="@dimen/dp_ten"
+        android:gravity="center_vertical"
+        android:text="@string/write_comment"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <!-- old pass -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:layout_height="wrap_content">
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etComment"
+                android:layout_width="match_parent"
+                android:imeOptions="actionDone"
+                android:layout_height="wrap_content"
+                android:hint="@string/write_comment_hint"
+                app:customEditTextFont="Roboto-Thin.ttf" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/btnPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dp_twenty"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/send"
+        app:fab_colorNormal="@color/domestic_intl_btn_bg"
+        app:fab_colorPressed="@color/domestic_intl_btn_bg_alpha"
+        app:fab_colorRipple="@android:color/darker_gray" />
+
+</LinearLayout>

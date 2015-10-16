@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:background="@color/action_bar_bg_alpha"
+    android:orientation="horizontal">
+
+    <dynobjx.com.jrs.customviews.EditTextPlus
+        android:id="@+id/etComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_fifteen"
+        android:textColor="@android:color/white"
+        android:layout_weight="80"
+        android:hint="@string/write_your_comment"
+        android:textColorHint="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/ivSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:src="@drawable/send"/>
+
+</LinearLayout>

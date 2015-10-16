@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <dynobjx.com.jrs.customviews.TextViewPlus
+        android:layout_width="match_parent"
+        android:background="@color/domestic_intl_btn_bg"
+        android:layout_height="@dimen/dp_fifty"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_thirty"
+        app:customTextViewFont="Roboto-Medium.ttf"
+        android:paddingLeft="@dimen/dp_ten"
+        android:gravity="center_vertical"
+        android:text="@string/edit_profile"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <!-- full name -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:layout_height="wrap_content">
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_fullname"
+                app:customEditTextFont="Roboto-Thin.ttf" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- street address -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dp_fifteen"
+            android:layout_height="wrap_content">
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:inputType="textCapWords"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/hint_st_address"
+                app:customEditTextFont="Roboto-Thin.ttf" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:layout_marginLeft="@dimen/dp_ten"
+            android:layout_marginBottom="@dimen/dp_twenty"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:text="@string/add_my_address"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                app:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvMyAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:text="@string/tap_to_add"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_twenty"
+                app:customTextViewFont="Roboto-Medium.ttf" />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    <dynobjx.com.jrs.customviews.TextViewPlus
+        android:id="@+id/tvUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_ten"
+        android:textColor="@color/action_bar_bg"
+        android:text="Update Profile"
+        android:textSize="@dimen/sp_twenty_five"
+        app:customTextViewFont="Roboto-Light.ttf"
+        style="?android:attr/borderlessButtonStyle"/>
+
+</LinearLayout>

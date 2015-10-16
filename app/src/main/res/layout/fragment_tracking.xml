@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_fifteen"
+        android:layout_marginRight="@dimen/dp_fifteen"
+        android:orientation="vertical">
+
+        <dynobjx.com.jrs.customviews.EditTextPlus
+            android:id="@+id/etORNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/reg_background"
+            android:inputType="number"
+            android:hint="@string/OR"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/dp_fifteen"
+            android:paddingBottom="@dimen/dp_fifteen"
+            android:paddingTop="@dimen/dp_fifteen"
+            android:textSize="@dimen/sp_twenty"
+            app:customEditTextFont="Roboto-Light.ttf" />
+        <dynobjx.com.jrs.customviews.EditTextPlus
+            android:id="@+id/etBC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/reg_background"
+            android:inputType="number"
+            android:hint="@string/BC"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/dp_fifteen"
+            android:paddingBottom="@dimen/dp_fifteen"
+            android:paddingTop="@dimen/dp_fifteen"
+            android:textSize="@dimen/sp_twenty"
+            app:customEditTextFont="Roboto-Light.ttf" />
+
+        <dynobjx.com.jrs.customviews.ButtonPlus
+            android:id="@+id/btnTrack"
+            android:background="@drawable/button_login_clickable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text="@string/track"
+            android:layout_marginTop="@dimen/dp_forty"
+            app:customButtonFont="Roboto-Regular.ttf"
+            android:textSize="@dimen/sp_twenty_five"/>
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+

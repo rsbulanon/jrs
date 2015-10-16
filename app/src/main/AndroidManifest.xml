@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="dynobjx.com.jrs">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
+
+    <application
+        android:name=".activities.JRSApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/jrs_app_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDkVgKvUEy6KU0IMgcG2_8i4NiWliW6qeA" />
+
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".activities.BranchLocatorActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCalcuPage1Activity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCalcuPage2DomesticActivity"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCalcuPage3_MailActivity"
+            android:parentActivityName=".activities.RateCalcuPage2DomesticActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCalcuFinalPageDomesticLightPackageActivity"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCalcuPage3_CargoActivity"
+            android:parentActivityName=".activities.RateCalcuPage3_CargoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RateCalcuPage3_BoxActivity"
+            android:label="@string/title_activity_rate_calcu_page3__box"
+            android:parentActivityName=".activities.RateCalcuPage2DomesticActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.RateCalcuPage3_PouchActivity"
+            android:label="@string/title_activity_rate_calcu_page3__pouch"
+            android:parentActivityName=".activities.RateCalcuPage2DomesticActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.ScopeActivity"
+            android:label="@string/title_activity_scope"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.RateCalcuPage2InternationalActivity"
+            android:label="@string/title_activity_rate_calcu_page2_international"
+            android:windowSoftInputMode="stateHidden"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.RateCalcuFinalPageInternationalActivity"
+            android:label="@string/title_activity_rate_calcu_final_page_international"
+            android:windowSoftInputMode="stateHidden"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.CreateAccountActivity"
+            android:label="@string/title_activity_create_account"
+            android:parentActivityName=".activities.LoginActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.RateCalcuSummaryActivity"
+            android:label="@string/title_activity_rate_calcu_summary"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.TrackResultActivity"
+            android:label="@string/title_activity_track_result"
+            android:parentActivityName=".activities.TrackingActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.TrackingActivity"
+            android:label="@string/title_activity_tracking"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.BranchDetailsActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activities.BranchLocatorActivity"/>
+        <activity
+            android:name=".activities.BranchInMapActivity"
+            android:parentActivityName=".activities.BranchLocatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PickupActivity"
+            android:parentActivityName=".activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FBActivity"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activities.RateCalcuFinalPageDomesticHeavyPackageActivity"
+            android:label="@string/title_activity_rate_calcu_final_page_domestic_heavy_package"
+            android:parentActivityName=".activities.RateCalcuPage1Activity"
+            />
+
+
+    </application>
+
+</manifest>

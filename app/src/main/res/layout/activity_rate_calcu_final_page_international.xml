@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="match_parent"
+            android:background="@color/calcu4_header_bg"
+            android:layout_height="@dimen/dp_fifty"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_thirty"
+            app:customTextViewFont="Roboto-Thin.ttf"
+            android:paddingLeft="@dimen/dp_ten"
+            android:gravity="center_vertical"
+            android:text="@string/finalStep"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="@dimen/dp_ten"
+            android:layout_marginTop="@dimen/dp_ten"
+            android:background="@android:color/white" />
+
+        <!--<dynobjx.com.jrs.customviews.TextViewPlus-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/specify_origin"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="@dimen/sp_thirty"-->
+        <!--app:customTextViewFont="Roboto-Light.ttf" />-->
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/dp_ten"
+            android:layout_marginRight="@dimen/dp_ten"
+            android:layout_weight="80"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                card_view:cardBackgroundColor="@color/domestic_intl_btn_bg"
+                card_view:cardCornerRadius="@dimen/dp_five"
+                card_view:cardElevation="@dimen/dp_five">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/dp_five"
+                    android:orientation="vertical">
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/location"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_twenty"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                    <Spinner
+                        android:id="@+id/SprOrigin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/SprDestination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                card_view:cardBackgroundColor="@color/domestic_intl_btn_bg"
+                card_view:cardCornerRadius="@dimen/dp_five"
+                card_view:cardElevation="@dimen/dp_five">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="@dimen/dp_five"
+                    android:orientation="vertical">
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/insurance"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_twenty"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+                    <CheckBox
+                        android:id="@+id/chkValuation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_alpha"
+                        android:textSize="@dimen/sp_fifteen"
+                        android:text="@string/valuation"
+                        android:onClick="onCheckboxClicked"/>
+                    <CheckBox
+                        android:id="@+id/chkInsurance"
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/sp_fifteen"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_alpha"
+                        android:text="@string/insurance"
+                        android:onClick="onCheckboxClicked"/>
+
+                    <dynobjx.com.jrs.customviews.EditTextPlus
+                        android:id="@+id/txtDeclaredValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/declared_value"
+                        android:textColorHint="@color/white_alpha"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/auto_complete_bottom"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/sp_fifteen"
+                        card_view:customTextViewFont="Roboto-Light.ttf"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="@dimen/dp_fifteen"
+                    card_view:cardBackgroundColor="@color/domestic_intl_btn_bg"
+                    card_view:cardCornerRadius="@dimen/dp_five"
+                    card_view:cardElevation="@dimen/dp_five">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <dynobjx.com.jrs.customviews.EditTextPlus
+                            android:id="@+id/txtweight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/grams"
+                            android:paddingBottom="10dp"
+                            android:textColorHint="@color/white_alpha"
+                            android:padding="@dimen/sp_five"
+                            android:inputType="numberDecimal"
+                            android:background="@drawable/auto_complete_bottom"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/sp_fifteen"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end">
+
+                    <!--<com.melnykov.fab.FloatingActionButton-->
+                    <!--android:id="@+id/fab"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="bottom|right"-->
+                    <!--android:layout_margin="16dp"-->
+                    <!--app:fab_colorNormal="@color/calcu1_header_bg"-->
+                    <!--app:fab_colorPressed="@color/footer_bg_alpha"-->
+                    <!--app:fab_colorRipple="@android:color/darker_gray"  />-->
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:background="@color/float_transparent"
+        android:layout_alignParentBottom="true">
+
+        <!--<com.melnykov.fab.FloatingActionButton-->
+            <!--android:id="@+id/fab"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="16dp"-->
+            <!--app:fab_colorNormal="@color/calcu1_header_bg"-->
+            <!--app:fab_colorPressed="@color/footer_bg_alpha"-->
+            <!--app:fab_colorRipple="@android:color/darker_gray"  />-->
+
+    </RelativeLayout>
+
+</LinearLayout>

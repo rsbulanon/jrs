@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@color/domestic_intl_btn_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp_ten"
+        android:layout_marginBottom="@dimen/dp_twenty">
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_twenty"
+            app:customTextViewFont="Roboto-Light.ttf"
+            android:text="@string/welcome"/>
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_thirty"
+            app:customTextViewFont="Roboto-Regular.ttf"
+            android:text="@string/sample_name"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

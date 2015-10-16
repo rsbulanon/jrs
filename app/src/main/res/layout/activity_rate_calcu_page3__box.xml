@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/calcu3_header_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_fifteen">
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/step3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_twenty"
+            app:customTextViewFont="Roboto-Light.ttf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="@dimen/dp_ten"
+            android:layout_marginTop="@dimen/dp_ten"
+            android:background="@android:color/white" />
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_spt"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dp_twenty_five"
+            app:customTextViewFont="Roboto-Light.ttf" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/dp_ten"
+        android:layout_weight="70"
+        android:orientation="vertical">
+
+        <!-- express letter -->
+        <LinearLayout
+            android:id="@+id/llExtraSmallBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:layout_marginBottom="@dimen/dp_five"
+            android:padding="@dimen/dp_ten"
+            android:background="@drawable/button_domestic_intl_clickable"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/extra_small_box"
+                app:customTextViewFont="Roboto-Regular.ttf"
+                android:textSize="@dimen/sp_thirty"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"/>
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chargeExtraSmallBox"
+                app:customTextViewFont="Roboto-Light.ttf"
+                android:textSize="@dimen/sp_fifteen"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!--1 Pounder-->
+        <LinearLayout
+            android:id="@+id/llExpressSmallBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:layout_marginBottom="@dimen/dp_five"
+            android:padding="@dimen/dp_ten"
+            android:background="@drawable/button_domestic_intl_clickable"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/express_small_box"
+                app:customTextViewFont="Roboto-Regular.ttf"
+                android:textSize="@dimen/sp_thirty"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"/>
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chargeExpressSmallBox"
+                app:customTextViewFont="Roboto-Light.ttf"
+                android:textSize="@dimen/sp_fifteen"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!-- regular letter -->
+        <LinearLayout
+            android:id="@+id/llExpressBoxMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:layout_marginBottom="@dimen/dp_five"
+            android:padding="@dimen/dp_ten"
+            android:background="@drawable/button_domestic_intl_clickable"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/express_box_medium"
+                app:customTextViewFont="Roboto-Regular.ttf"
+                android:textSize="@dimen/sp_thirty"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"/>
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chargeExpressBoxMedium"
+                app:customTextViewFont="Roboto-Light.ttf"
+                android:textSize="@dimen/sp_fifteen"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <!-- brown envelope -->
+        <LinearLayout
+            android:id="@+id/llExpressBoxLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical|left"
+            android:padding="@dimen/dp_ten"
+            android:background="@drawable/button_domestic_intl_clickable"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/express_box_large"
+                app:customTextViewFont="Roboto-Regular.ttf"
+                android:textSize="@dimen/sp_thirty"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"/>
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chargeExpressBoxLarge"
+                app:customTextViewFont="Roboto-Light.ttf"
+                android:textSize="@dimen/sp_fifteen"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

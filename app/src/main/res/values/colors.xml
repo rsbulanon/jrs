@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_gray">#c2c7cc</color>
+    <color name="dark_gray">#3d454c</color>
+    <color name="dark_gray_pressed">#373e44</color>
+    <color name="darker_gray">#1f2226</color>
+    <color name="login_field_bg">#c6e6d1</color>
+    <color name="btn_login">#14692e</color>
+    <color name="btn_login_alpha">#9614692e</color>
+    <color name="action_bar_bg">#01752c</color>
+    <color name="action_bar_bg_alpha">#9601752c</color>
+    <color name="nav_drawer_bg">#4b5f60</color>
+    <color name="nav_drawer_header_bg">#3a8332</color>
+    <color name="footer_bg">#d20028</color>
+    <color name="footer_bg_alpha">#96d20028</color>
+    <color name="white_alpha">#e5e5e5</color>
+    <color name="calcu1_header_bg">#a21e36</color>
+    <color name="calcu2_header_bg">#af6b22</color>
+    <color name="calcu3_header_bg">#9fb43b</color>
+    <color name="calcu4_header_bg">#b7586c</color>
+    <color name="domestic_intl_btn_bg">#01a75b</color>
+    <color name="domestic_intl_btn_bg_alpha">#9601a75b</color>
+    <color name="rate_calcu_summary_ship">#4f1c01</color>
+    <color name="rate_calcu_summary_result">#014c4f</color>
+    <color name="rate_calcu_summary_text">#8ed7a2</color>
+    <color name="pink">#ca1538</color>
+    <color name="pup_button">#2ecc71</color>
+</resources>

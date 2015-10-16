@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--my pickup location-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <dynobjx.com.jrs.customviews.TextViewPlus
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_location"
+        android:background="@color/domestic_intl_btn_bg"
+        android:textColor="@android:color/white"
+        android:paddingTop="@dimen/dp_five"
+        android:paddingBottom="@dimen/dp_five"
+        android:paddingLeft="@dimen/dp_ten"
+        android:textSize="@dimen/sp_thirty"
+        card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_five">
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:text="@string/province"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sp_fifteen"
+            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+        <Spinner
+            android:id="@+id/spnrProvince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_five"></Spinner>
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:text="@string/town"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sp_fifteen"
+            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+        <Spinner
+            android:id="@+id/spnrCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_five"></Spinner>
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:text="@string/brgy"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sp_fifteen"
+            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+        <Spinner
+            android:id="@+id/spnrBrgy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_five"></Spinner>
+
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/btnProceed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_twenty"
+            android:layout_marginBottom="@dimen/dp_ten"
+            android:src="@drawable/next"
+            card_view:fab_colorNormal="@color/domestic_intl_btn_bg"
+            card_view:fab_colorPressed="@color/domestic_intl_btn_bg_alpha"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

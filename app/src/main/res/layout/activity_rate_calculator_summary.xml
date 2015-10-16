@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <dynobjx.com.jrs.customviews.TextViewPlus
+        android:id="@+id/tvGoBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/footer_url_clickable"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_five"
+        android:paddingBottom="@dimen/dp_five"
+        android:text="@string/go_back"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_twenty"
+        app:customTextViewFont="Roboto-Light.ttf" />
+
+    <ScrollView
+        android:layout_above="@id/tvGoBack"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- shipping information -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_ten"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="@dimen/dp_five"
+                card_view:cardElevation="@dimen/dp_five">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:orientation="vertical">
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_ten"
+                        android:text="@string/shipping_info"
+                        android:textColor="@color/domestic_intl_btn_bg"
+                        android:textSize="@dimen/dp_twenty_five"
+                        card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    <!-- service -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/shipping_service"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvService"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!--type-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/shipping_type"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- from -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/shipping_from"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvFrom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- to -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/shipping_to"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvTo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- weight -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/shipping_wt"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvWeight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- value -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/shipping_value"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!-- results -->
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_ten"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="@dimen/dp_five"
+                card_view:cardElevation="@dimen/dp_five">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:orientation="vertical">
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_ten"
+                        android:text="@string/results"
+                        android:textColor="@color/domestic_intl_btn_bg"
+                        android:textSize="@dimen/dp_twenty_five"
+                        card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    <!-- freight -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/results_freight"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvFreight"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- excess charge -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/results_excess"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvExcess"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- insurance -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/insurance"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvInsurance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <!-- valuation -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/valuation"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvValuation"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_ten"
+                        android:layout_marginRight="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:orientation="horizontal">
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="40"
+                            android:text="@string/results_total"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                        <dynobjx.com.jrs.customviews.TextViewPlus
+                            android:id="@+id/tvTotal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="60"
+                            android:paddingLeft="@dimen/sp_ten"
+                            android:text="@string/minus"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/sp_twenty"
+                            card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

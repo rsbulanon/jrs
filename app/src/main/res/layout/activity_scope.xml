@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_ten"
+    android:orientation="vertical"
+    tools:context="dynobjx.com.jrs.activities.ScopeActivity">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="@dimen/dp_five"
+        card_view:cardElevation="@dimen/dp_five">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="@dimen/dp_five"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textColor="@color/domestic_intl_btn_bg"
+                android:textSize="@dimen/sp_thirty"
+                card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:textColor="@android:color/darker_gray"
+                card_view:customTextViewFont="Roboto-Light.ttf"
+                android:textSize="@dimen/sp_fifteen"
+                android:text="@string/province"/>
+
+            <Spinner
+                android:id="@+id/spnrProvince"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_five"
+                android:layout_height="wrap_content"
+                android:background="@drawable/squareshape">
+            </Spinner>
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                card_view:customTextViewFont="Roboto-Light.ttf"
+                android:text="@string/town"/>
+
+            <Spinner
+                android:id="@+id/spnrCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five"
+                android:layout_marginBottom="@dimen/dp_twenty"
+                android:background="@drawable/squareshape"></Spinner>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="@dimen/dp_five"
+        card_view:cardElevation="@dimen/dp_five">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="@dimen/dp_five"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvResultHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/result"
+                android:textColor="@color/domestic_intl_btn_bg"
+                android:textSize="@dimen/sp_thirty"
+                card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/default_status"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_twenty"
+                android:gravity="center"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <ListView
+                android:id="@+id/lvBrgy"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:scrollbars="none"
+                android:layout_height="match_parent"></ListView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

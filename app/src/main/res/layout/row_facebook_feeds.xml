@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_five"
+        android:layout_marginBottom="@dimen/dp_five"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <ImageView
+                android:id="@+id/ivProfilePic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/dp_five"
+                android:layout_marginLeft="@dimen/dp_fifteen"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_launcher" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tbMenu"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:minHeight="?attr/actionBarSize"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tbMenu"
+                android:layout_toRightOf="@+id/ivProfilePic"
+                android:orientation="vertical">
+
+
+                <dynobjx.com.jrs.customviews.TextViewPlus
+                    android:id="@+id/tvPostedBy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Ned Flanders"
+                    android:textSize="20sp"
+                    android:textColor="@color/action_bar_bg"
+                    card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                <dynobjx.com.jrs.customviews.TextViewPlus
+                    android:id="@+id/tvDatePosted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Ned Flanders"
+                    android:textSize="15sp"
+                    card_view:customTextViewFont="Roboto-Thin.ttf" />
+
+                <dynobjx.com.jrs.customviews.TextViewPlus
+                    android:id="@+id/tvFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:text="Ned Flanders"
+                    android:textSize="17sp"
+                    card_view:customTextViewFont="Roboto-Thin.ttf" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_1"
+            android:icon="@drawable/edit"
+            android:title="@string/item_1"/>
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/password"
+            android:title="@string/item_2"/>
+        <item
+            android:id="@+id/navigation_item_3"
+            android:icon="@drawable/mobile"
+            android:title="@string/item_3"/>
+        <item
+            android:id="@+id/navigation_item_4"
+            android:icon="@drawable/lgout"
+            android:title="@string/item_4"/>
+    </group>
+</menu>

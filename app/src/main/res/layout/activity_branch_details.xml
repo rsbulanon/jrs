@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_ten"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="@dimen/dp_five"
+        card_view:cardElevation="@dimen/dp_five">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_five">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/branch_details"
+                android:textColor="@color/domestic_intl_btn_bg"
+                android:textSize="@dimen/sp_thirty"
+                card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:text="@string/branch_address"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvBranchAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_ten"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:text="@string/branch_address"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_twenty"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:text="@string/contact_nos"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvContactNos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_ten"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:text="@string/contact_nos"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_twenty"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:text="@string/contact_person"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvContactPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_ten"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:text="@string/contact_person"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_twenty"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:text="@string/hint_email"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_ten"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:text="@string/hint_email"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/sp_twenty"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_twenty"
+                android:text="@string/branch_image"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_fifteen"
+                card_view:customTextViewFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvNoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_ten"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/no_image_available"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/sp_twenty"
+                card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+</ScrollView>

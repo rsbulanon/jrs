@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/loginpage_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:id="@+id/tvBranchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/app_name"
+            android:textColor="@color/action_bar_bg"
+            android:textSize="@dimen/sp_twenty_five"
+            app:customTextViewFont="Roboto-Medium.ttf" />
+
+        <!--address-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/address"
+                android:textSize="17sp"
+                app:customTextViewFont="Roboto-Thin.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvBranchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="20dp"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                app:customTextViewFont="Roboto-Light.ttf" />
+
+        </LinearLayout>
+
+        <!--contact person-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/contact_person"
+                android:textSize="17sp"
+                app:customTextViewFont="Roboto-Thin.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvContactPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="20dp"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                app:customTextViewFont="Roboto-Light.ttf" />
+
+        </LinearLayout>
+
+        <!--contact numbers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/contact_nos"
+                android:textSize="17sp"
+                app:customTextViewFont="Roboto-Thin.ttf" />
+
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:id="@+id/tvContactNos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/black"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                app:customTextViewFont="Roboto-Light.ttf" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

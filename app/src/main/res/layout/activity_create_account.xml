@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/dp_fifteen"
+            android:layout_marginRight="@dimen/dp_fifteen"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/dp_thirty"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginRight="@dimen/dp_five"
+                android:scaleType="fitXY"
+                android:src="@drawable/loginpage_logo" />
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/reg_background"
+                android:gravity="left"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="@dimen/dp_fifteen"
+                android:paddingLeft="@dimen/dp_fifteen"
+                android:paddingTop="@dimen/dp_fifteen"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_twenty"
+                app:customEditTextFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/reg_background"
+                android:gravity="left"
+                android:hint="@string/hint_number"
+                android:inputType="number|phone"
+                android:paddingBottom="@dimen/dp_fifteen"
+                android:paddingLeft="@dimen/dp_fifteen"
+                android:paddingTop="@dimen/dp_fifteen"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_twenty"
+                app:customEditTextFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/reg_background"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:paddingBottom="@dimen/dp_fifteen"
+                android:paddingLeft="@dimen/dp_fifteen"
+                android:paddingTop="@dimen/dp_fifteen"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_twenty"
+                app:customEditTextFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.EditTextPlus
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/reg_background"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:paddingBottom="@dimen/dp_fifteen"
+                android:paddingLeft="@dimen/dp_fifteen"
+                android:paddingTop="@dimen/dp_fifteen"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_twenty"
+                app:customEditTextFont="Roboto-Light.ttf" />
+
+            <dynobjx.com.jrs.customviews.ButtonPlus
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_forty"
+                android:background="@drawable/button_login_clickable"
+                android:text="@string/register"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_twenty_five"
+                app:customButtonFont="Roboto-Regular.ttf" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

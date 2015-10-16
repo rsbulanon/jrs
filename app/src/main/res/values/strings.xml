@@ -1,0 +1,383 @@
+<resources>
+    <string name="app_name">Jrs-express</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="content_hint">Content</string>
+    <string name="drawer_hint">Drawer</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_number">Number</string>
+    <string name="hint_password">Password</string>
+    <string name="OR">OR Number</string>
+    <string name="BC">BC</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+    <string name="track">TRACK</string>
+    <string name="create_account">Sign Up for an Account</string>
+    <string name="item_1">Edit Profile</string>
+    <string name="item_2">Change Password</string>
+    <string name="item_3">Change my mobile no</string>
+    <string name="item_4">Log Out</string>
+    <string name="welcome">Welcome!</string>
+    <string name="sample_name">Juan Dela Cruz</string>
+    <string name="visit_jrs">Visit the jrs express website</string>
+    <string name="go_back">go back to the start</string>
+    <string name="branches">Branches</string>
+    <string name="scope">Scope</string>
+    <string name="rates">Rates</string>
+    <string name="pickup">Pickup</string>
+    <string name="tracking">Tracking</string>
+    <string name="branch_keyword_header">Search by keyword</string>
+    <string name="branch_keyword_hint">Enter keyword (e.g Metro Manila)</string>
+    <string name="shipping_info">Shipping Information</string>
+    <string name="shipping_service">Service : </string>
+    <string name="shipping_type">Type : </string>
+    <string name="shipping_from">From : </string>
+    <string name="shipping_to">To : </string>
+    <string name="shipping_wt">Wt : </string>
+    <string name="shipping_value">Value : </string>
+    <string name="results">Results</string>
+    <string name="results_freight">Freight : </string>
+    <string name="results_insurance">Insurance : </string>
+    <string name="results_excess">Excess Charge : </string>
+    <string name="results_valuation">Valuation :</string>
+    <string name="results_total">TOTAL : </string>
+    <string name="tracking_fragment">Tracking</string>
+    <string name="tracking_ORNumber_hint">OR Number</string>
+    <string name="tracking_BC_hint">BC</string>
+    <string name="change_pass">Change Password</string>
+    <string name="change_mobile">Change Mobile No</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="hint_old_pw">Old Password</string>
+    <string name="hint_new_pw">New Password</string>
+    <string name="hint_confirm_pw">Confirm New Password</string>
+    <string name="hint_fullname">Full Name</string>
+    <string name="hint_address">Address</string>
+    <string name="add_my_address">My address</string>
+    <string name="hint_st_address">Street Address</string>
+    <string name="tap_to_add">Tap to add your address</string>
+    <string name="find"><u>Find your tracking number</u></string>
+    <string name="log_out"><u>Log out</u></string>
+
+
+    <!-- rate calcu step 1 -->
+    <string name="step1">Step 1:</string>
+    <string name="select_sod">Select the Scope of Delivery.</string>
+    <string name="domestic">domestic</string>
+    <string name="for_local">For local deliveries</string>
+    <string name="international">international</string>
+    <string name="for_intl">For international deliveries</string>
+
+    <!-- rate calcu step 2 -->
+    <string name="step2">Step 2:</string>
+    <string name="select_spc">Select Packaging Class.</string>
+    <string name="mails">mails</string>
+    <string name="cargo">cargo</string>
+    <string name="box">box</string>
+    <string name="packages">pouches</string>
+    <string name="documents">document</string>
+    <string name="parcel">parcel</string>
+
+    <!-- rate calcu step 3 -->
+    <string name="step3">Step 3:</string>
+    <string name="select_spt">Select Packaging Type.</string>
+    <string name="express_letter">express letter</string>
+    <string name="one_pounder">1 pounder</string>
+    <string name="regular_leter">regular letter</string>
+    <string name="brown_envelope">brown envelope</string>
+    <string name="charge100">Minimum Charge to the first 100 g.\nAdditional Charge for succeeding 100 g.</string>
+    <string name="charge500">Minimum Charge to the first 500 g.\nAdditional Charge for succeeding 500 g.</string>
+
+    <!-- rate calcu final page -->
+    <string name="finalStep">Final Step:</string>
+    <string name="specify_origin">Specify the Origin and Destination.</string>
+    <string name="location">Location</string>
+    <string name="weight">Weight</string>
+    <string name="origin">Origin</string>
+    <string name="length">Length</string>
+    <string name="width">Width</string>
+    <string name="height">Height</string>
+    <string name="destination">Destination</string>
+    <string name="insurance_and_lost">Insurance and Lost</string>
+    <string name="valuation">Valuation</string>
+    <string name="insurance">Insurance</string>
+    <string name="declared_value">Declared Value</string>
+    <string name="grams">Weight</string>
+    <string name="minus">-</string>
+
+    <!--rate calcu step 3 cargo-->
+    <string name="express_cargo">express cargo</string>
+    <string name="general_cargo">general cargo</string>
+    <string name="chargeExpress">Minimum Charge for the first 2500 g.\nAdditional Charge for succeeding 500 g.</string>
+    <string name="chargeGeneral">Minimum Charge for the first 3 kilos.\nAdditional Charge for succeeding kilo.</string>
+    <string name="title_activity_rate_calcu_page3__cargo">RateCalcuPage3_CargoActivity</string>
+
+    <!--rate calcu step 3 box-->
+    <string name="extra_small_box">extra small box</string>
+    <string name="express_small_box">express small box</string>
+    <string name="express_box_medium">express box medium</string>
+    <string name="express_box_large">express box large</string>
+    <string name="chargeExtraSmallBox">Minimum Charge for 3 to 4 kilos.\nAdditional Charge for succeeding kilo.</string>
+    <string name="chargeExpressSmallBox">Minimum Charge for 4 to 5 kilos.\nAdditional Charge for succeeding kilo.</string>
+    <string name="chargeExpressBoxMedium">Minimum Charge for 6 to 9 kilos.\nAdditional Charge for succeeding kilo.</string>
+    <string name="chargeExpressBoxLarge">Minimum Charge for 10 to 20 kilos.\nAdditional Charge for succeeding kilo.</string>
+    <string name="title_activity_rate_calcu_page3__box">RateCalcuPage3_BoxActivity</string>
+
+    <!--rate calcu step 3 pouch-->
+    <string name="three_pounder">3 pounder</string>
+    <string name="five_pounder">5 pounder</string>
+    <string name="charge_ThreePounder">Minimum Charge for the first 150 0 g or 1.5 kilo.\nAdditional Charge for succeeding 500 g.</string>
+    <string name="charge_FivePounder">Minimum Charge for the first 2500 g or 2.5 kilos.\nAdditional Charge for succeeding 500 g.</string>
+    <string name="title_activity_rate_calcu_page3__pouch">RateCalcuPage3_PouchActivity</string>
+    <string name="title_activity_scope">ScopeActivity</string>
+
+    <!--expandable list view-->
+    <string name="title_activity_expandable_list">ExpandableList Demo</string>
+
+    <!--Autocomplete Origin-->
+    <string-array name="origin">
+
+        <item>Abra</item>
+        <item>Agusan del Norte</item>
+        <item>Agusan del Sur</item>
+        <item>Aklan</item>
+        <item>Albay</item>
+        <item>Apayao</item>
+        <item>Aurora</item>
+
+        <item>Basilan</item>
+        <item>Bataan</item>
+        <item>Batanes</item>
+        <item>Batangas</item>
+        <item>Benguet</item>
+        <item>Biliran</item>
+        <item>Bohol</item>
+        <item>Bukidnon</item>
+        <item>Bulacan</item>
+
+        <item>Cagayan</item>
+        <item>Camarines Norte</item>
+        <item>Camarines Sur</item>
+        <item>Camiguin</item>
+        <item>Capiz</item>
+        <item>Catanduanes</item>
+        <item>Cavite</item>
+        <item>Cebu</item>
+        <item>Compostela Valley</item>
+
+        <item>Davao del Norte</item>
+        <item>Davao del Sur</item>
+        <item>Davao del Oriental</item>
+        <item>Dinagat Island</item>
+
+        <item>Eastern Samar</item>
+
+        <item>Guimaras</item>
+
+        <item>Ifugao</item>
+        <item>Ilocos Norte</item>
+        <item>Ilocos Sur</item>
+        <item>Ilocos Sur</item>
+        <item>Iloilo</item>
+        <item>Isabela</item>
+
+        <item>Kalinga</item>
+
+        <item>La Union</item>
+        <item>Laguna</item>
+        <item>Lanao del Norte</item>
+        <item>Lanao del Sur</item>
+        <item>Leyte</item>
+
+        <item>Maguindanao</item>
+        <item>Marinduque</item>
+        <item>Masbate</item>
+        <item>Metro Manila</item>
+        <item>Misamis Occidental</item>
+        <item>Misamis Oriental</item>
+        <item>Mountain Province</item>
+
+        <item>Negros Occidental</item>
+        <item>Negros Oriental</item>
+        <item>North Cotabato</item>
+        <item>Northern Samar</item>
+        <item>Nueva Ecija</item>
+        <item>Nueva Vizcaya</item>
+
+        <item>Occidental Mindoro</item>
+        <item>Oriental Mindoro</item>
+
+        <item>Palawan</item>
+        <item>Pampanga</item>
+        <item>Pangasinan</item>
+
+        <item>Quezon</item>
+        <item>Quirino</item>
+
+        <item>Rizal</item>
+        <item>Romblon</item>
+
+        <item>Samar</item>
+        <item>Sarangani</item>
+        <item>Shariff Kabunsan</item>
+        <item>Sorsogon</item>
+        <item>South Cotabato</item>
+        <item>Southern Leyte</item>
+        <item>Sultan Kudarat</item>
+        <item>Sulu</item>
+        <item>Surigao del Norte</item>
+        <item>Surigao del Sur</item>
+        <item>System</item>
+
+        <item>Tarlac</item>
+        <item>Tawi-Tawi</item>
+
+        <item>Zambales</item>
+        <item>Zamboanga del Norte</item>
+        <item>Zamboanga del Sur</item>
+        <item>Zamboanga Sibugay</item>
+    </string-array>
+
+    <string-array name = "origin_international">
+        <item>Autralia</item>
+        <item>Austria</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Belgium</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Cambodia</item>
+        <item>Canada</item>
+        <item>China</item>
+        <item>Cyprus</item>
+        <item>Denmark</item>
+        <item>England</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Greece</item>
+        <item>Guam</item>
+        <item>Hongkong</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kingdom of Saudi Arabia</item>
+        <item>Kuwait</item>
+        <item>Laos</item>
+        <item>Lebanon</item>
+        <item>London</item>
+        <item>Luxembourg</item>
+        <item>Macau</item>
+        <item>Malaysia</item>
+        <item>Myanmar</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>New Zeland</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Others</item>
+        <item>Pakistan</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Quatar</item>
+        <item>Scotland</item>
+        <item>Singapore</item>
+        <item>South Korea</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Taiwan</item>
+        <item>Thailand</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>USA</item>
+        <item>Vatican City</item>
+        <item>Vietnam</item>
+        <item>Wales</item>
+
+    </string-array>
+    <string name="title_activity_rate_calcu_page2_international">
+        RateCalcuPage2InternationalActivity
+    </string>
+    <string name="title_activity_rate_calcu_final_page_international">
+        RateCalcuFinalPageInternationalActivity
+    </string>
+    <string name="title_activity_create_account">CreateAccount</string>
+    <string name="title_activity_rate_calculator_summary">RateCalculatorSummary</string>
+    <string name="title_activity_rate_calcu_summary">RateCalcuSummaryActivity</string>
+    <string name="title_activity_tracking">TrackingActivity</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+    <!--checkbox insurance and lost-->
+
+    <!-- row_branches -->
+    <string name="address">Address</string>
+    <string name="contact_person">Contact Person</string>
+    <string name="contact_nos">Contact Nos</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_track_result">TrackResultActivity</string>
+    <string name="title_activity_rate_calcu_final_page_domestic_heavy_package">
+        RateCalcuFinalPageDomesticHeavyPackageActivity
+    </string>
+
+    <string name="sod">Scope of Delivery</string>
+    <string name="result">Result</string>
+    <string name="province">Province</string>
+    <string name="town">Town/Municipality</string>
+    <string name="brgy">Barangay</string>
+    <string name="default_status">Please select Province and\n Town/Municipality first</string>
+
+    <!-- facebook integration -->
+    <string name="fb_app_id">156130758051746</string>
+    <string name="share_via_fb">Share</string>
+    <string name="visit_link">Visit Link</string>
+    <string name="write_your_comment">Write your comment here</string>
+
+    <!-- pickup request -->
+    <string name="select_location">Select Location</string>
+    <string name="my_pickup_loc">My PickUp Location</string>
+    <string name="pickup_date">Pickup Date</string>
+    <string name="description">Description</string>
+    <string name="add_desc">Add your description here</string>
+    <string name="select_date">Select Pickup Date</string>
+    <string name="use_my_address">Use my address</string>
+    <string name="user_other">Select other location</string>
+
+    <!--destination request-->
+    <string name="destination_loc">Destination Location</string>
+
+    <!--Branch Details-->
+    <string name="branch_details">Branch Details</string>
+    <string name="view_in_map">View in Map</string>
+    <string name="fa_close">&#xf00d;</string>
+    <string name="branch_address">Branch Address</string>
+    <string name="contact_no">Contact Nos</string>
+    <string name="branch_image">Branch Image</string>
+    <string name="no_image_available">No Image \n Available</string>
+
+    <!-- mobile no verification -->
+    <string name="verify">Mobile Verification</string>
+    <string name="verification_code_hint">Verification Code</string>
+    <string name="mobile_no_hint">Mobile No</string>
+    <string name="new_mobile_no_hint">New mobile no</string>
+    <string name="curr_number">Your current no</string>
+
+    <!-- facebook -->
+    <string name="write_comment">JRS Express Offical Page</string>
+    <string name="write_comment_hint">Your comment</string>
+
+    <string name="set_pickup_loc">Set your pickup location</string>
+    <string name="add_destination">Add pickup destination/s</string>
+    <string name="send_pup_request">Send Pickup Request</string>
+    <string name="your_tracking_number">Your tracking number</string>
+
+
+</resources>

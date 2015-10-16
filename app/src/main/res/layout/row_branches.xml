@@ -1,0 +1,146 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="5dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tbMenu"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:minHeight="?attr/actionBarSize"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tbMenu"
+                android:orientation="vertical">
+
+                <dynobjx.com.jrs.customviews.TextViewPlus
+                    android:id="@+id/tvBranchName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/domestic_intl_btn_bg"
+                    android:textSize="@dimen/sp_twenty_five"
+                    card_view:customTextViewFont="Roboto-Medium.ttf" />
+
+                <!--address-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_twenty"
+                        android:text="@string/address"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/sp_fifteen"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:id="@+id/tvBranchAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:text="@string/branch_address"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sp_twenty"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                </LinearLayout>
+
+                <!--contact person-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_twenty"
+                        android:text="@string/contact_person"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/sp_fifteen"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:id="@+id/tvContactPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:text="@string/branch_address"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sp_twenty"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                </LinearLayout>
+
+                <!--contact numbers -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_twenty"
+                        android:text="@string/contact_nos"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/sp_fifteen"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                    <dynobjx.com.jrs.customviews.TextViewPlus
+                        android:id="@+id/tvContactNos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_ten"
+                        android:layout_marginTop="@dimen/dp_ten"
+                        android:text="@string/branch_address"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/sp_twenty"
+                        card_view:customTextViewFont="Roboto-Light.ttf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
