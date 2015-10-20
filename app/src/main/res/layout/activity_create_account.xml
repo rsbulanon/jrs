@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_gravity="center"
+    android:scrollbars="none"
     android:layout_height="wrap_content">
 
     <RelativeLayout
@@ -90,6 +91,13 @@
                 android:textSize="@dimen/sp_twenty"
                 app:customEditTextFont="Roboto-Light.ttf" />
 
+            <dynobjx.com.jrs.customviews.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_ten"
+                android:text="@string/note_email"/>
+
             <dynobjx.com.jrs.customviews.ButtonPlus
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
@@ -99,6 +107,7 @@
                 android:text="@string/register"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/sp_twenty_five"
+                android:layout_marginBottom="@dimen/dp_thirty"
                 app:customButtonFont="Roboto-Regular.ttf" />
 
 

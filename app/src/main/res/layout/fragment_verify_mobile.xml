@@ -13,32 +13,34 @@
         android:orientation="horizontal">
 
         <dynobjx.com.jrs.customviews.TextViewPlus
+            layout_height="wrap_content"
+            layout_width="wrap_content"
             android:layout_width="wrap_content"
-            android:background="@color/domestic_intl_btn_bg"
             android:layout_height="@dimen/dp_fifty"
+            android:background="@color/domestic_intl_btn_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_ten"
+            android:text="@string/verify"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_thirty"
-            app:customTextViewFont="Roboto-Medium.ttf"
-            android:paddingLeft="@dimen/dp_ten"
-            android:gravity="center_vertical"
-            android:text="Mobile Verification"
-            layout_width="wrap_content"
-            layout_height="wrap_content" />
+            app:customTextViewFont="Roboto-Medium.ttf" />
 
 
-        <ImageView
-            android:id="@+id/tvlogout"
-            android:layout_width="wrap_content"
+        <dynobjx.com.jrs.customviews.TextViewPlus
+            android:id="@+id/tvLogout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_fifty"
+            android:layout_gravity="end|center"
             android:background="@color/domestic_intl_btn_bg"
-            android:layout_height="37dp"
+            android:clickable="true"
+            android:gravity="end|center"
             android:paddingLeft="@dimen/dp_ten"
             android:paddingRight="@dimen/dp_ten"
-            android:gravity="end|center"
-            android:layout_gravity="end|center"
-            android:src="@drawable/lgout"
-            android:clickable="true" />
-
-
+            android:src="@drawable/search"
+            android:text="@string/log_out"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp_fifteen"
+            app:customTextViewFont="Roboto-Medium.ttf" />
     </LinearLayout>
 
 

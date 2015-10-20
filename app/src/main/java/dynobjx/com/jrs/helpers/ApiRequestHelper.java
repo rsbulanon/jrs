@@ -204,9 +204,16 @@ public class ApiRequestHelper {
         body.put(AppConstants.CODE, code);
         new PostRequestTask(AppConstants.POST_VERIFY_PHONE,body)
                 .execute(HttpRequest.post(AppConstants.JRS_URL + AppConstants.POST_VERIFY_PHONE)
-                .accept(AppConstants.APPLICATION_JSON)
-                .acceptCharset(AppConstants.UTF_8_CHARSET)
-                .authorization(AppConstants.BEARER+token));
+                        .accept(AppConstants.APPLICATION_JSON)
+                        .acceptCharset(AppConstants.UTF_8_CHARSET)
+                        .authorization(AppConstants.BEARER + token));
+    }
+
+    /** get forgot password */
+    public void forgotPassword(String email) {
+        new APIRequestTask(AppConstants.GET_FORGOT_PASS)
+                .execute(HttpRequest.get(AppConstants.JRS_URL + AppConstants.GET_FORGOT_PASS,
+                        true, AppConstants.PARAM_EMAIL, email));
     }
 
     public interface OnAPIRequestListener {

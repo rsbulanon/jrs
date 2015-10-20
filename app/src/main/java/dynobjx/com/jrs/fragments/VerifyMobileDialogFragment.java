@@ -85,7 +85,7 @@ public class VerifyMobileDialogFragment extends DialogFragment implements ApiReq
         }
     }
 
-    @OnClick(R.id.tvlogout)
+    @OnClick(R.id.tvLogout)
     public void logOut() {
         SweetAlertDialog sw  = new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE);
         sw.setTitleText("Logout");

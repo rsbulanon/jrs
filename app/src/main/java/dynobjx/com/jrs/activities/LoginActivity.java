@@ -17,6 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dynobjx.com.jrs.R;
+import dynobjx.com.jrs.fragments.ForgotPasswordFragment;
 import dynobjx.com.jrs.helpers.ApiRequestHelper;
 import dynobjx.com.jrs.helpers.AppConstants;
 import dynobjx.com.jrs.helpers.DaoHelper;
@@ -34,7 +35,6 @@ public class LoginActivity extends BaseActivity implements ApiRequestHelper.OnAP
     private int requestCount = 2;
     private int successRequestCount = 0;
     private DateFormat sdf = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss");
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +73,16 @@ public class LoginActivity extends BaseActivity implements ApiRequestHelper.OnAP
 
         /** validation */
         if (email.isEmpty()) {
-            etEmail.setError("This field is required");
+            etEmail.setError(AppConstants.WARNING_FIELD_REQUIRED);
             etEmail.requestFocus();
         } else if (pw.isEmpty()) {
-            etPassword.setError("This field is requried");
+            etPassword.setError(AppConstants.WARNING_FIELD_REQUIRED);
+            etPassword.requestFocus();
+        } else if (!isValidEmailAddress(email)) {
+            etEmail.setError(AppConstants.WARNING_INVALID_EMAIL);
+            etEmail.requestFocus();
+        } else if (pw.length() < 6) {
+            etPassword.setError(AppConstants.WARNING_INVALID_PASS_LENGTH);
             etPassword.requestFocus();
         } else {
             /** check if network connection is available */
@@ -95,15 +101,14 @@ public class LoginActivity extends BaseActivity implements ApiRequestHelper.OnAP
         animateToLeft(this);
     }
 
-
-
-
     @Override
     public void onRequestStart(String action) {
         Log.d("fetch", "action --> " + action);
         if (action.equals(AppConstants.POST_TOKEN)) {
             showProgressDialog("Login", "Authenticating your credentials, Please wait...");
-        } else  {
+        } else if (action.equals(AppConstants.GET_FORGOT_PASS)) {
+            showProgressDialog("Forgot Password","Please wait...");
+        } else {
             updateProgressDialog("Fetching data, Please wait...");
         }
     }
@@ -128,62 +133,71 @@ public class LoginActivity extends BaseActivity implements ApiRequestHelper.OnAP
     @Override
     public void onRequestSuccessful(String action, String json) {
         Log.d("fetch", "------> " + json);
+        if (json.contains("Unconfirmed or invalid email")) {
+            dismissProgressDialog();
+            showSweetDialog("Unverified Email", "Unconfirmed or invalid email, " +
+                    "Re-sending email confirmation please check you email.","warning");
+        } else {
+            try {
+                if (Prefs.getMyStringPrefs(this, "accessToken").isEmpty() && action.equals(AppConstants.POST_TOKEN)) {
+                    if (isUserAuthenticated(json)) {
+                        Log.d("login", "JSON --> " + json);
+                        setUserCredentials(json);
+                        String token = Prefs.getMyStringPrefs(this,AppConstants.ACCESS_TOKEN);
 
-        try {
-            if (Prefs.getMyStringPrefs(this, "accessToken").isEmpty() && action.equals(AppConstants.POST_TOKEN)) {
-                if (isUserAuthenticated(json)) {
-                    Log.d("login", "JSON --> " + json);
-                    setUserCredentials(json);
-                    String token = Prefs.getMyStringPrefs(this,AppConstants.ACCESS_TOKEN);
+                        /** check if there are cached provinces in local db
+                         * if none, fetch all provinces from API
+                         * */
+                        if (DaoHelper.getProvinceCount() == 0) {
+                            requestCount++;
+                            apiRequestHelper.getProvinces(token);
+                        }
 
-                    /** check if there are cached provinces in local db
-                     * if none, fetch all provinces from API
-                     * */
-                    if (DaoHelper.getProvinceCount() == 0) {
-                        requestCount++;
-                        apiRequestHelper.getProvinces(token);
+                        /** check if there are cached branches in local db
+                         *  if none, fetch all branches from API
+                         * */
+                        if (DaoHelper.getBranchesCount() == 0) {
+                            requestCount++;
+                            apiRequestHelper.getBranches(token);
+                        }
+
+                        apiRequestHelper.getUserInfo(Prefs.getMyStringPrefs(this, AppConstants.USERNAME), token);
+                        apiRequestHelper.checkIfPhoneIsVerified(token);
+                    } else {
+                        showToast(AppConstants.ERR_INVALID_USER);
+                        successRequestCount = 0;
+                        requestCount = 2;
+                        dismissProgressDialog();
                     }
-
-                    /** check if there are cached branches in local db
-                     *  if none, fetch all branches from API
-                     * */
-                    if (DaoHelper.getBranchesCount() == 0) {
-                        requestCount++;
-                        apiRequestHelper.getBranches(token);
-                    }
-
-                    apiRequestHelper.getUserInfo(Prefs.getMyStringPrefs(this, AppConstants.USERNAME), token);
-                    apiRequestHelper.checkIfPhoneIsVerified(token);
-                } else {
-                    showToast(AppConstants.ERR_INVALID_USER);
-                    successRequestCount = 0;
-                    requestCount = 2;
-                    dismissProgressDialog();
+                } else if (action.equals(AppConstants.GET_BRANCHES)) {
+                    saveBranchesToLocalDB(json);
+                    Log.d("fetch","branches saved to local DB");
+                } else if (action.equals(AppConstants.GET_PROVINCES)) {
+                    saveProvinceToLocalDB(json);
+                    Log.d("fetch","provinces saved to local DB");
+                } else if (action.equals(AppConstants.GET_USER_INFO)) {
+                    saveUserInfoToLocalDB(json);
+                } else if (action.equals(AppConstants.POST_IS_PHONE_VERIFIED)) {
+                    Log.d("fetch","phone verification --> " + json);
+                    Prefs.setMyStringPref(this,AppConstants.PHONE_VERIFICATION,json);
                 }
-            } else if (action.equals(AppConstants.GET_BRANCHES)) {
-                saveBranchesToLocalDB(json);
-                Log.d("fetch","branches saved to local DB");
-            } else if (action.equals(AppConstants.GET_PROVINCES)) {
-                saveProvinceToLocalDB(json);
-                Log.d("fetch","provinces saved to local DB");
-            } else if (action.equals(AppConstants.GET_USER_INFO)) {
-                saveUserInfoToLocalDB(json);
-            } else if (action.equals(AppConstants.POST_IS_PHONE_VERIFIED)) {
-                Log.d("fetch","phone verification --> " + json);
-                Prefs.setMyStringPref(this,AppConstants.PHONE_VERIFICATION,json);
-            }
-            successRequestCount++;
-            Log.d("fetch", "SUCCESS REQUEST COUNT --> " + successRequestCount + " request count --> " + requestCount);
-            if (successRequestCount == requestCount) {
-                dismissProgressDialog();
-                startActivity(new Intent(this, MainActivity.class));
-                animateToLeft(this);
-                finish();
-            }
-        } catch (Exception ex) {
+                successRequestCount++;
+                Log.d("fetch", "SUCCESS REQUEST COUNT --> " + successRequestCount + " request count --> " + requestCount);
+                if (successRequestCount == requestCount) {
+                    dismissProgressDialog();
+                    startActivity(new Intent(this, MainActivity.class));
+                    animateToLeft(this);
+                    finish();
+                } else {
+                    if (action.equals(AppConstants.GET_FORGOT_PASS)) {
+                        dismissProgressDialog();
+                        showSweetDialog("Forgot Password","Please check your email to reset your password","success");
+                    }
+                }
+            } catch (Exception ex) {
 
+            }
         }
-
     }
 
     private void initFields() {
@@ -192,5 +206,22 @@ public class LoginActivity extends BaseActivity implements ApiRequestHelper.OnAP
 
 //        etEmail.setText("rsbulanon@dynamicobjx.com");
 //        etPassword.setText("qwerty");
+    }
+
+    @OnClick(R.id.tvForgotPassword)
+    public void forgotPassword() {
+        final ForgotPasswordFragment forgotPasswordFragment = ForgotPasswordFragment.newInstance();
+        forgotPasswordFragment.setOnForgotPasswordListener(new ForgotPasswordFragment.OnForgotPasswordListener(){
+            @Override
+            public void onForgot(String email) {
+                if (!isNetworkAvailable()) {
+                    showToast(AppConstants.ERR_CONNECTION);
+                } else {
+                    forgotPasswordFragment.dismiss();
+                    apiRequestHelper.forgotPassword(email);
+                }
+            }
+        });
+        forgotPasswordFragment.show(getFragmentManager(), "forgot");
     }
 }

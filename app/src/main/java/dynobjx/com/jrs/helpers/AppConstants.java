@@ -33,6 +33,7 @@ public class AppConstants {
     public static final String GET_BRANCHES = "api/Branches";
     public static final String GET_PROVINCES = "api/Province";
     public static final String GET_CITY_MUN = "api/CityMun";
+    public static final String GET_FORGOT_PASS = "api/Account/ForgotPassword";
     public static final String POST_PICKUP = "api/Pickup";
     public static final String POST_CHANGE_PW = "api/Account/ChangePassword";
     public static final String GET_VALIDATE_PU_LOC = "api/validatePickupLoc";
@@ -72,7 +73,7 @@ public class AppConstants {
     public static final String ERR_READ_TIMEOUT = "Request was taking too long, Check your internet connectivity and try again! ";
     public static final String OK_CHANGE_PW = "Password successfully changed!";
     public static final String OK_UPDATE_PROFILE = "Your profile has been successfully updated!";
-    public static final String OK_REGISTRATION = "Congratulations, your are now registered!";
+    public static final String OK_REGISTRATION = "Congratulations, your are now registered, Please check your email for verification.";
     public static final String OK_VERIFICATION = "Your mobile no. successfully verified!";
     public static final String OK_CHANGE_MOBILE = "Your mobile no. successfully updated!";
     public static final String OK_FB_WALL_POST = "Your comment was successfully posted!";
@@ -84,6 +85,8 @@ public class AppConstants {
     public static final String WARNING_ST_ADDRESS = "Please specify your street address";
     public static final String WARNING_DESTI_COUNT = "Please select atleast 1 location for destination";
     public static final String WARNING_FIELD_REQUIRED = "This field is required";
+    public static final String WARNING_INVALID_PASS_LENGTH = "Your password must be at least 6 characters long.";
+    public static final String WARNING_INVALID_EMAIL = "Invalid email address format!";
     public static final String WARNING_PW_NOT_MATCH = "Confirm password does not match the password";
     public static final String WARNING_PROFILE_ADDRESS = "Please specify your address";
     public static final String WARNING_SELECT_ORIGIN = "Please select origin location";
@@ -160,6 +163,7 @@ public class AppConstants {
     public static final String PARAM_BRGY_ID = "BrgyId";
     public static final String PARAM_USERNAME = "userName";
     public static final String PARAM_BRANCH_ID = "BranchId";
+    public static final String PARAM_EMAIL = "email";
 
     /** set api read timeout */
     public static final int READ_TIMEOUT = 15000;

@@ -379,5 +379,7 @@
     <string name="send_pup_request">Send Pickup Request</string>
     <string name="your_tracking_number">Your tracking number</string>
 
+    <string name="note_email"><b>NOTE : </b>Please enter a valid email address. A link will be sent to your email for verification.</string>
+    <string name="forgot_password">Forgot Password</string>
 
 </resources>

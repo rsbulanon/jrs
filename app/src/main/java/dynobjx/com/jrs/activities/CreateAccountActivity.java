@@ -44,17 +44,26 @@ public class CreateAccountActivity extends BaseActivity implements ApiRequestHel
 
     @OnClick(R.id.btnRegister)
     public void register() {
-        if (email.length() == 0) {
+        if (email.getText().toString().isEmpty()) {
             email.setError(AppConstants.WARNING_FIELD_REQUIRED);
             email.requestFocus();
-        } else if (number.length() == 0) {
+        } else if (!isValidEmailAddress(email.getText().toString())) {
+            email.setError(AppConstants.WARNING_INVALID_EMAIL);
+            email.requestFocus();
+        } else if (number.getText().toString().isEmpty()) {
             number.setError(AppConstants.WARNING_FIELD_REQUIRED);
             number.requestFocus();
-        } else if (password.length() == 0) {
+        } else if (password.getText().toString().isEmpty()) {
             password.setError(AppConstants.WARNING_FIELD_REQUIRED);
             password.requestFocus();
-        } else if (confirmPassword.length() == 0) {
+        } else if (password.getText().toString().length() < 6) {
+            password.setError(AppConstants.WARNING_INVALID_PASS_LENGTH);
+            password.requestFocus();
+        } else if (confirmPassword.getText().toString().isEmpty()) {
             confirmPassword.setError(AppConstants.WARNING_FIELD_REQUIRED);
+            confirmPassword.requestFocus();
+        } else if (confirmPassword.getText().toString().length() < 6) {
+            confirmPassword.setError(AppConstants.WARNING_INVALID_PASS_LENGTH);
             confirmPassword.requestFocus();
         } else if (!password.getText().toString().equals(confirmPassword.getText().toString())) {
             confirmPassword.setError(AppConstants.WARNING_PW_NOT_MATCH);
@@ -62,7 +71,6 @@ public class CreateAccountActivity extends BaseActivity implements ApiRequestHel
         } else  {
             if (isNetworkAvailable()) {
                 regGetInformation();
-
             } else {
                 showToast(AppConstants.ERR_CONNECTION);
             }
@@ -86,31 +94,14 @@ public class CreateAccountActivity extends BaseActivity implements ApiRequestHel
         Log.d("API", "APIRequest successful " + body);
         dismissProgressDialog();
 
-        if(body.isEmpty()) {
+        if (body.isEmpty() || body.contains("Email confirmation sent, please check your mail")) {
             showToast(AppConstants.OK_REGISTRATION);
-            startActivity(new Intent(CreateAccountActivity.this, LoginActivity.class));
             onBackPressed();
+        } else if (body.contains("is already taken")) {
+            showToast(AppConstants.ERR_EMAIL_TAKEN);
         } else {
             showToast("Registration failed");
         }
-
-        if (action.equals(""))
-        try {
-            JSONObject obj = new JSONObject(body);
-            String message = obj.getString("ModelState");
-            String taken = "{\"\":[\"Name " + email.getText().toString() + " is already taken.\",\"Email '" + email.getText().toString() + "' is already taken.\"]}";
-            if (message.equals(taken)) {
-                email.setError(AppConstants.ERR_EMAIL_TAKEN);
-            }
-            else {
-                showToast(AppConstants.OK_REGISTRATION);
-                startActivity(new Intent(CreateAccountActivity.this, LoginActivity.class));
-                onBackPressed();
-            }
-        } catch (JSONException e) {
-            Log.d("API","error while parsing json --> " + e.toString());
-        }
-
     }
 
     @Override
